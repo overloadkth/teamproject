@@ -23,14 +23,15 @@ public class MainActivity extends Activity {
      */
     private GoogleApiClient client;
     private Intent foodTable;
+    private Intent BusTable;
     private Intent myiWeb;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         foodTable = new Intent(getApplicationContext(), FoodTableActivity.class);
+        BusTable = new Intent(getApplicationContext(), BusTable.class);
         myiWeb = new Intent(getApplicationContext(), MyiWeb.class);
 
         Button button1 = (Button) findViewById(R.id.button1);
@@ -40,6 +41,14 @@ public class MainActivity extends Activity {
                 startActivity(foodTable);
             }
         });
+
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v){
+                startActivity(BusTable);
+            }
+        });
         Button button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new OnClickListener() {
             @Override
@@ -47,16 +56,12 @@ public class MainActivity extends Activity {
                 startActivity(myiWeb);
             }
         });
-
-
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();

@@ -64,18 +64,3 @@ public class FoodTableActivity extends Activity {
       });
     }
 }
-
-private class Description extends AsyncTask<Void, Void, Void> {
-    String desc;
-    @Override
-    protected void doInBackground(Void... params) {
-        try {
-            Document doc = Jsoup.connect("http://m.mju.ac.kr/mbs/mjumob/jsp/restaurant/restaurant_mobile.jsp?configIdx=36548&id=mjumob_050201000000").get();
-            Elements contents = doc.select(".diet dd");
-            desc = contents.text();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-}
