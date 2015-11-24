@@ -26,7 +26,7 @@ public class MyiWeb extends Activity{
         WebSettings set = webview.getSettings();
         set.setJavaScriptEnabled(true);
         set.setBuiltInZoomControls(true);
-        webview.loadUrl("http://www.google.com");
+        webview.loadUrl("http://myiweb.mju.ac.kr");
 
        // findViewById(R.id.btnStart).setOnClickListener(onclick);
     }
