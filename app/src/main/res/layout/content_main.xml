@@ -29,10 +29,10 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:text="식단"
-            android:id="@+id/button"
-            android:onClick="onClick01"
+            android:id="@+id/button1"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="0.2" />
 
         <Button
@@ -41,8 +41,7 @@
             android:text="버스시간표"
             android:id="@+id/button2"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.15"
-            android:onClick="onClick02" />
+            android:layout_weight="0.15" />
 
         <Button
             android:layout_width="match_parent"
@@ -50,8 +49,7 @@
             android:text="시간표"
             android:id="@+id/button3"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.15"
-            android:onClick="onClick03" />
+            android:layout_weight="0.15" />
 
         <Button
             android:layout_width="match_parent"
@@ -59,8 +57,7 @@
             android:text="Myiweb"
             android:id="@+id/button4"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.15"
-            android:onClick="onClick04" />
+            android:layout_weight="0.15" />
 
         <Button
             android:layout_width="match_parent"
@@ -68,8 +65,7 @@
             android:text="설정"
             android:id="@+id/button5"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.15"
-            android:onClick="onClick05" />
+            android:layout_weight="0.15" />
     </LinearLayout>
 
 </RelativeLayout>

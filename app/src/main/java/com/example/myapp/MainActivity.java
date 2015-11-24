@@ -4,16 +4,28 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+import android.view.View.OnClickListener;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button button1 = (Button)findViewById(R.id.button1);
+        button1.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), FoodTableActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -23,30 +35,10 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-    public void onClick01(View v) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"));
-        startActivity(intent);
-    }
-    public void onClick02(View v) {
-        Toast toast_01 = Toast.makeText(this, "버튼이 눌렸습니다.", Toast.LENGTH_SHORT);
-        toast_01.show();
-    }
-    public void onClick03(View v) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1234-5678"));
-        startActivity(intent);
-    }
-    public void onClick04(View v) {
-        Toast.makeText(this, "버튼이 눌렸습니다.", Toast.LENGTH_SHORT).show();
-    }
-    public void onClick05(View v) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1234-5678"));
-        startActivity(intent);
-    }
+
 }
