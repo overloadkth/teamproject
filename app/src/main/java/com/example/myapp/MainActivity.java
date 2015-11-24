@@ -12,26 +12,51 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 public class MainActivity extends Activity {
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
+    private Intent foodTable;
+    private Intent myiWeb;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        foodTable = new Intent(getApplicationContext(), FoodTableActivity.class);
+        myiWeb = new Intent(getApplicationContext(), MyiWeb.class);
 
-        Button button1 = (Button)findViewById(R.id.button1);
+        Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), FoodTableActivity.class);
-                startActivity(intent);
+                startActivity(foodTable);
             }
         });
+        Button button4 = (Button) findViewById(R.id.button4);
+        button4.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(myiWeb);
+            }
+        });
+
+
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
