@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
      */
     private GoogleApiClient client;
     private Intent foodTable;
-    private Intent myiWeb;
+    private Intent myiWebLogin;
 
 
     @Override
@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         foodTable = new Intent(getApplicationContext(), FoodTableActivity.class);
-        myiWeb = new Intent(getApplicationContext(), MyiWeb.class);
+        myiWebLogin = new Intent(getApplicationContext(), myiwebLoginActivity.class);
 
         Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new OnClickListener() {
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
         button4.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(myiWeb);
+                startActivity(myiWebLogin);
             }
         });
 

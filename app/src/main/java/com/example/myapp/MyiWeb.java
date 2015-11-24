@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -15,7 +17,10 @@ import static com.example.myapp.R.layout.activity_myiweb;
  * Created by MeromGreen on 2015-11-24.
  */
 public class MyiWeb extends Activity{
-    WebView webview;
+    public static WebView webview;
+    public MyiWeb(){
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +28,16 @@ public class MyiWeb extends Activity{
 
         webview = (WebView)findViewById(R.id.logIn);
         webview.setWebViewClient(new WebClient()); // 응룡프로그램에서 직접 url 처리
+
         WebSettings set = webview.getSettings();
         set.setJavaScriptEnabled(true);
-        set.setBuiltInZoomControls(true);
-        webview.loadUrl("http://myiweb.mju.ac.kr");
-
+//        webview.loadUrl("http://myiweb.mju.ac.kr");
+//        webview.loadUrl("javascript:(function() { " + "document.getElementsByTagName('div')[0].style.display = 'none'; " + "})()");
+//        webview.loadUrl("javascript:<script>document.getElementsByTagName(\"input\").value='1';</script>");
        // findViewById(R.id.btnStart).setOnClickListener(onclick);
+
     }
+
 
 //    OnClickListener onclick =new OnClickListener() {
 //
