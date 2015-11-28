@@ -1,12 +1,16 @@
 package com.example.myapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.EditText;
 
 import static com.example.myapp.R.layout.activity_myiweb;
@@ -16,33 +20,55 @@ import static com.example.myapp.R.layout.activity_myiweb;
  */
 public class MyiWeb extends Activity{
     WebView webview;
+    String email;
+    String password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(activity_myiweb);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        email = bundle.getString("ID");
+        password = bundle.getString("PW");
 
         webview = (WebView)findViewById(R.id.logIn);
-        webview.setWebViewClient(new WebClient()); // 응룡프로그램에서 직접 url 처리
-        WebSettings set = webview.getSettings();
-        set.setJavaScriptEnabled(true);
-        set.setBuiltInZoomControls(true);
-        webview.loadUrl("http://www.google.com");
+        webview.clearCache(true);
+        webview.setWebViewClient(new WebClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                webview.loadUrl("javascript: {" +
+                        "document.getElementById('userID').value = '" + email + "';" +
+                        "document.getElementById('userPW').value = '" + password + "';" +
+                        "var a = document.getElementsByTagName('input');" +
+                        "a[2].CheckSubmit(); };");
+                webview.loadUrl("javascript:CheckSubmit()");
+            }
+        });
+        webview.getSettings().setDatabaseEnabled(true);
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.loadUrl("http://sso.mju.ac.kr/swift/login/login_myiweb.jsp");
 
-       // findViewById(R.id.btnStart).setOnClickListener(onclick);
+        //login(email, password);
+
+
+
     }
 
-//    OnClickListener onclick =new OnClickListener() {
-//
-//        @Override
-//        public void onClick(View v) {
-//            System.out.println("클릭");
-//            String url= null;
-//            EditText add = (EditText)findViewById(R.id.add);
-//            url = add.getText().toString();
-//            webview.loadUrl(url);
-//        }
-//    };
 
+    private void login(String id, String pw){
+        webview.loadUrl("javascript: {" +
+                "document.getElementById('userID').value = '"+email +"';" +
+                "document.getElementById('userPW').value = '"+password+"';" +
+                "var a = document.getElementsByTagName('input');" +
+                "a[2].CheckSubmit(); };");
+        webview.loadUrl("javascript:CheckSubmit()");
+//        webview.loadUrl("javascript: {" +
+//                "var useless = document.getElementById('userID').value = '60122';" +
+//                "var useles2s = document.getElementById('userPW').value = '3233222';" +
+//                "var a = document.getElementsByTagName('input');" +
+//                "a[2].CheckSubmit(); };");
+//        webview.loadUrl("javascript:CheckSubmit()");
+    }
     class WebClient extends WebViewClient {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
