@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 
-
 public class BusTable extends AppCompatActivity {
 
     private Intent BusTable_Button1;
