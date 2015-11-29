@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         foodTable = new Intent(getApplicationContext(), FoodTableActivity.class);
         BusTable = new Intent(getApplicationContext(), BusTable.class);
-        myiWeb = new Intent(getApplicationContext(), MyiWeb.class);
+        myiWeb = new Intent(getApplicationContext(), myiwebLoginActivity.class);
 
         Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new OnClickListener() {

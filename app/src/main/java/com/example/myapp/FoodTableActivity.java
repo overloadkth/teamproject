@@ -1,6 +1,5 @@
 package com.example.myapp;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
@@ -11,12 +10,17 @@ import android.view.View;
 import android.app.Activity;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import org.w3c.dom.Text;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -57,6 +61,7 @@ public class FoodTableActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_table);
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         textview3 = (TextView) findViewById(R.id.textView3);
