@@ -20,35 +20,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import org.w3c.dom.Text;
-
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.app.Activity;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.parser.Parser;
-import org.jsoup.select.Elements;
-
-import java.io.IOException;
 import java.util.Calendar;
 
-import org.w3c.dom.Text;
-
 public class FoodTableActivity extends Activity {
-    Elements FoodTable;
-    Element special;
-    Element korea;
+    public Elements FoodTable;
+    public Element special;
+    public Element korea;
     Calendar c = Calendar.getInstance();
     final String[] weekDay = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 
@@ -124,30 +101,30 @@ public class FoodTableActivity extends Activity {
     }
 
     public void setFoodTable_ST (String Day) {
-      Document doc = null;
-      try {
-        doc = Jsoup.connect("http://www.mju.ac.kr/mbs/mjukr/jsp/restaurant/restaurant.jsp?configIdx=36548&id=mjukr_051002020000").get();
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
+        Document doc = null;
+        try {
+            doc = Jsoup.connect("http://www.mju.ac.kr/mbs/mjukr/jsp/restaurant/restaurant.jsp?configIdx=36548&id=mjukr_051002020000").get();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-      FoodTable = doc.select("div table tbody tr tr td");
-      if ( Day == "Mon" || Day == "Sun" || Day == "Sat") {
-        korea = FoodTable.get(1);
-        special = FoodTable.get(5);
-      } else if ( Day == "Tue") {
-        korea = FoodTable.get(11);
-        special = FoodTable.get(15);
-      } else if ( Day == "Wed") {
-        korea = FoodTable.get(21);
-        special = FoodTable.get(25);
-      } else if ( Day == "Thu") {
-        korea = FoodTable.get(31);
-        special = FoodTable.get(35);
-      } else if ( Day == "Fri") {
-        korea = FoodTable.get(41);
-        special = FoodTable.get(45);
-      }
+        FoodTable = doc.select("div table tbody tr tr td");
+        if ( Day == "Mon" || Day == "Sun" || Day == "Sat") {
+            korea = FoodTable.get(1);
+            special = FoodTable.get(5);
+        } else if ( Day == "Tue") {
+            korea = FoodTable.get(11);
+            special = FoodTable.get(15);
+        } else if ( Day == "Wed") {
+            korea = FoodTable.get(21);
+            special = FoodTable.get(25);
+        } else if ( Day == "Thu") {
+            korea = FoodTable.get(31);
+            special = FoodTable.get(35);
+        } else if ( Day == "Fri") {
+            korea = FoodTable.get(41);
+            special = FoodTable.get(45);
+        }
       textview3.setText(special.text());
       textview5.setText(korea.text());
     }

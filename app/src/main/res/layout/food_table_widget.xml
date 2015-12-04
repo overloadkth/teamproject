@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin" android:background="#09C">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="학생식당"
+        android:id="@+id/ST_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="특식"
+        android:id="@+id/ST_special"
+        android:layout_below="@+id/ST_title"
+        android:layout_alignLeft="@+id/ST_title"
+        android:layout_alignStart="@+id/ST_title"
+        android:layout_marginTop="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/ST_special_food"
+        android:layout_below="@+id/ST_special"
+        android:layout_alignLeft="@+id/ST_special"
+        android:layout_alignStart="@+id/ST_special" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="한식"
+        android:id="@+id/ST_korea"
+        android:layout_below="@+id/ST_special_food"
+        android:layout_alignLeft="@+id/ST_special_food"
+        android:layout_alignStart="@+id/ST_special_food"
+        android:layout_marginTop="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/ST_korea_food"
+        android:layout_below="@+id/ST_korea"
+        android:layout_alignLeft="@+id/ST_korea"
+        android:layout_alignStart="@+id/ST_korea" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="명진당"
+        android:id="@+id/MJ_title"
+        android:layout_below="@+id/ST_korea_food"
+        android:layout_alignLeft="@+id/ST_korea_food"
+        android:layout_alignStart="@+id/ST_korea_food"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="특식"
+        android:id="@+id/MJ_special"
+        android:layout_below="@+id/MJ_title"
+        android:layout_alignLeft="@+id/MJ_title"
+        android:layout_alignStart="@+id/MJ_title"
+        android:layout_marginTop="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/MJ_special_food"
+        android:layout_below="@+id/MJ_special"
+        android:layout_alignLeft="@+id/MJ_special"
+        android:layout_alignStart="@+id/MJ_special" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="한식"
+        android:id="@+id/MJ_korea"
+        android:layout_below="@+id/MJ_special_food"
+        android:layout_alignLeft="@+id/MJ_special_food"
+        android:layout_alignStart="@+id/MJ_special_food"
+        android:layout_marginTop="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/MJ_korea_food"
+        android:layout_below="@+id/MJ_korea"
+        android:layout_alignLeft="@+id/MJ_korea"
+        android:layout_alignStart="@+id/MJ_korea" />
+
+</RelativeLayout>
