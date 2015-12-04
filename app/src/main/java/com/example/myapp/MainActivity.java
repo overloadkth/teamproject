@@ -49,6 +49,14 @@ public class MainActivity extends Activity {
                 startActivity(BusTable);
             }
         });
+        Button button3 = (Button)findViewById(R.id.button3);
+        button3.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), TimeTableActivity.class);
+                startActivity(intent);
+            }
+        });
         Button button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new OnClickListener() {
             @Override
