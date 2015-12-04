@@ -16,7 +16,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -25,18 +24,14 @@
             android:label="@string/title_activity_food_table"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".MyiWeb"
-            android:label="@string/title_activity_myiweb"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:name=".myiweb.MyiWeb"
+            android:label="@string/title_activity_myiweb">
         </activity>
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity
-            android:name=".myiwebLoginActivity"
+            android:name=".myiweb.myiwebLoginActivity"
             android:label="@string/title_activity_myiweb_login" />
-        <!--
-             ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -64,11 +59,8 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/food_table_widget_info" />
         </receiver>
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".BusTable_Button1"></activity>
-        <activity android:name=".BusTable_Button2"></activity>
-        <activity android:name=".BusTable_Button3"></activity>
-        <activity android:name=".BusTable_Button4"></activity>
+
+
         <activity
             android:name=".TimeTableActivity"
             android:label="@string/title_activity_time_table"
