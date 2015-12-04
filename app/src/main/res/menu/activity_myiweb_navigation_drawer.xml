@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="성적조회/강의평가">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_diploma"
+                        android:icon="@drawable/ic_menu_share"
+                        android:title="성적조회" />
+                    <item
+                        android:id="@+id/nav_evaluate"
+                        android:icon="@drawable/ic_menu_send"
+                        android:title="강의평가" />
+                    <item
+                        android:id="@+id/nav_withdraw"
+                        android:icon="@drawable/ic_menu_send"
+                        android:title="수강철회" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="장학금신청">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_bank"
+                        android:icon="@drawable/ic_menu_share"
+                        android:title="장학금계좌정보입력" />
+                    <item
+                        android:id="@+id/nav_scholarship"
+                        android:icon="@drawable/ic_menu_send"
+                        android:title="장학금신청" />
+                     </group>
+            </menu>
+        </item>
+        <item android:title="모의토익">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_seeToeic"
+                        android:icon="@drawable/ic_menu_share"
+                        android:title="모의토익신청" />
+                    <item
+                        android:id="@+id/nav_toeicScore"
+                        android:icon="@drawable/ic_menu_send"
+                        android:title="토익성적조회" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>

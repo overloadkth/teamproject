@@ -24,13 +24,13 @@
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
-        <item >성적조회</item>
-        <item >강의평가</item>
-        <item >수강철회</item>
-        <item >장학금계좌정보입력</item>
-        <item >장학금신청</item>
-        <item >모의토익신청</item>
-        <item >토익성적조회</item>
+        <item>성적조회</item>
+        <item>강의평가</item>
+        <item>수강철회</item>
+        <item>장학금계좌정보입력</item>
+        <item>장학금신청</item>
+        <item>모의토익신청</item>
+        <item>토익성적조회</item>
     </string-array>
     <array name="nav_drawer_icons">
         <item>@mipmap/ic_launcher</item>
@@ -43,4 +43,8 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="title_activity_time_table">TimeTableActivity</string>
+    <string name="title_activity_myiweb_navigation">MyiwebNavigation</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

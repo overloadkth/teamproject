@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapp">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,21 +16,22 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".FoodTableActivity"
             android:label="@string/title_activity_food_table"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".myiweb.MyiWeb"
-            android:label="@string/title_activity_myiweb">
-        </activity>
-
+            android:label="@string/title_activity_myiweb"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".myiweb.myiwebLoginActivity"
-            android:label="@string/title_activity_myiweb_login" />
+            android:label="@string/title_activity_myiweb_login"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -39,18 +40,13 @@
         <activity
             android:name=".BusTable"
             android:label="@string/title_activity_bus_table"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity android:name=".BusTable_Button1" >
-        </activity>
-        <activity android:name=".BusTable_Button2" >
-        </activity>
-        <activity android:name=".BusTable_Button3" >
-        </activity>
-        <activity android:name=".BusTable_Button4" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".BusTable_Button1" />
+        <activity android:name=".BusTable_Button2" />
+        <activity android:name=".BusTable_Button3" />
+        <activity android:name=".BusTable_Button4" />
 
-        <receiver android:name=".FoodTableWidget" >
+        <receiver android:name=".FoodTableWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -60,11 +56,14 @@
                 android:resource="@xml/food_table_widget_info" />
         </receiver>
 
-
         <activity
             android:name=".TimeTableActivity"
             android:label="@string/title_activity_time_table"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".myiweb.MyiwebNavigation"
+            android:label="@string/title_activity_myiweb_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
