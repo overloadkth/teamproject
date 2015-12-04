@@ -128,18 +128,22 @@ public class MyiWeb extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_diploma) {
-            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=60122469");
-        } else if (id == R.id.nav_evaluate) {
-
-        } else if (id == R.id.nav_withdraw) {
-
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd="+email);
+//        } else if (id == R.id.nav_evaluate) {
+//            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=60122469");
+//        } else if (id == R.id.nav_withdraw) {
+//            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=60122469");
         } else if (id == R.id.nav_bank) {
-
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl06?attribute=accfirstLoad");
         } else if (id == R.id.nav_scholarship) {
-
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl06?attribute=firstLoad");
+        } else if (id == R.id.nav_scholarRecord) {
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl05?attribute=getScholarSchs&studentCd="+email);
         } else if (id == R.id.nav_seeToeic) {
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh05.Suh05Svl01?attribute=datecheck&studentCd="+email);
 
         } else if (id == R.id.nav_toeicScore) {
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh05.Suh05Svl01?attribute=sel_toeic&studentCd="+email);
 
         }
 
