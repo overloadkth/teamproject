@@ -25,7 +25,7 @@ public class MyiWeb extends AppCompatActivity
     private WebView frontWebView;
     private String email;
     private String password;
-
+    boolean doneOnce=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,14 +70,17 @@ public class MyiWeb extends AppCompatActivity
         hiddenWebView.setWebViewClient(new WebClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                hiddenWebView.loadUrl("javascript: {" +
-                        "document.getElementById('userID').value = '" + email + "';" +
-                        "document.getElementById('userPW').value = '" + password + "';" +
-                        "var a = document.getElementsByTagName('input');"+
-                        "a.CheckSubmit()"
-                        +"};");
+                if(!doneOnce) {
+                    hiddenWebView.loadUrl("javascript: {" +
+                            "document.getElementById('userID').value = '" + email + "';" +
+                            "document.getElementById('userPW').value = '" + password + "';" +
+                            "var a = document.getElementsByTagName('input');" +
+                            "a.CheckSubmit()"
+                            + "};");
 
-                hiddenWebView.loadUrl("javascript:CheckSubmit()");
+                    hiddenWebView.loadUrl("javascript:CheckSubmit()");
+                    doneOnce=true;
+                }
             }
         });
 
@@ -152,10 +155,10 @@ public class MyiWeb extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-}
-class WebClient extends WebViewClient {
-    public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        view.loadUrl(url);
-        return true;
+    class WebClient extends WebViewClient {
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
     }
 }
