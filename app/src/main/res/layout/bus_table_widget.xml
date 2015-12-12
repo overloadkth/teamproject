@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin" android:background="#09C">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="운행구분 :"
+        android:id="@+id/Type"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="aaa"
+        android:id="@+id/BusType"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/Type"
+        android:layout_toEndOf="@+id/Type"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="출발 시간 :"
+        android:id="@+id/start"
+        android:layout_below="@+id/BusType"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="11111"
+        android:id="@+id/start_time"
+        android:layout_alignTop="@+id/start"
+        android:layout_toRightOf="@+id/start"
+        android:layout_toEndOf="@+id/start"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="경유 시간 :"
+        android:id="@+id/via"
+        android:layout_below="@+id/start_time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="2222"
+        android:id="@+id/via_time"
+        android:layout_below="@+id/start_time"
+        android:layout_toRightOf="@+id/via"
+        android:layout_toEndOf="@+id/via"
+        android:layout_marginLeft="10dp" />
+</RelativeLayout>

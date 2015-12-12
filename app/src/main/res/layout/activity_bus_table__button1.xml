@@ -1,10 +1,2852 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.myapp.BusTable_Button1">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:weightSum="1">
 
-</RelativeLayout>
+<TableLayout
+    android:id="@+id/table"
+    android:layout_width="fill_parent"
+    android:layout_marginRight="2dp"
+    android:layout_marginLeft="2dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black">
+    <TableRow android:layout_height="wrap_content">
+        <TextView
+            android:layout_height="30dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:background="#ffcccccc"
+            android:text="순번" />
+        <TextView
+            android:layout_height="30dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            android:text="운행구분" />
+        <TextView
+            android:layout_height="30dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            android:text="출발시간" />
+        <TextView
+            android:layout_height="30dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            android:text="진입로 경유 예정시간"
+            android:layout_column="3" />
+
+
+    </TableRow>
+    <TableRow>
+
+    </TableRow>
+    <TableRow>
+
+    </TableRow>
+    <TableRow>
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/button1"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/busType1"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/startTime1"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+             />
+        <TextView
+            android:id="@+id/viaTime1"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+             />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/button2"
+            android:layout_column="0"
+             />
+
+        <TextView
+            android:id="@+id/busType2"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/startTime2"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/viaTime2"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/button3"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/busType3"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/startTime3"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/viaTime3"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/button4"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/busType4"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/startTime4"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/viaTime4"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/button5"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/busType5"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/startTime5"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/viaTime5"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:id="@+id/button6"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/busType6"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/startTime6"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/viaTime6"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/button7"
+            android:layout_column="0" />
+
+        <TextView
+            android:id="@+id/busType7"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/startTime7"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/viaTime7"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:id="@+id/button8"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType8"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime8"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime8"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:id="@+id/button9"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType9"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime9"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime9"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:id="@+id/button10"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType10"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime10"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime10"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:id="@+id/button11"
+            android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/busType11"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime11"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime11"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:id="@+id/button12"
+            android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/busType12"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime12"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime12"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13"
+            android:id="@+id/button13"
+            android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/busType13"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime13"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime13"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14"
+            android:id="@+id/button14"
+            android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/busType14"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime14"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime14"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:id="@+id/button15"
+            android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/busType15"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime15"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime15"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16"
+            android:id="@+id/button16"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType16"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime16"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime16"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17"
+            android:id="@+id/button17"
+            android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/busType17"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime17"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime17"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18"
+            android:id="@+id/button18"
+            android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/busType18"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime18"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime18"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19"
+            android:id="@+id/button19"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType19"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime19"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime19"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:id="@+id/button20"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType20"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime20"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime20"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21"
+            android:id="@+id/button22"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType21"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime21"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime21"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22"
+            android:id="@+id/button23"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType22"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime22"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime22"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23"
+            android:id="@+id/button23"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType23"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime23"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime23"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:id="@+id/button24"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType24"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime24"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime24"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:id="@+id/button25"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType25"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime25"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime25"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="26"
+            android:id="@+id/button23"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType26"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime26"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime26"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27"
+            android:id="@+id/button27"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType27"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime27"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime27"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="28"
+            android:id="@+id/button28"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType28"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime28"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime28"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29"
+            android:id="@+id/button29"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType29"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime29"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime29"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:id="@+id/button30"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType30"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime30"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime30"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31"
+            android:id="@+id/button31"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType31"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime31"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime31"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="32"
+            android:id="@+id/button32"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType32"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime32"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime32"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="33"
+            android:id="@+id/button33"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType33"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime33"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime33"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="34"
+            android:id="@+id/button34"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType34"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime34"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime34"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35"
+            android:id="@+id/button35"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType35"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime35"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime35"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="36"
+            android:id="@+id/button23"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType36"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime36"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime36"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="37"
+            android:id="@+id/button37"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType37"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime37"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime37"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="38"
+            android:id="@+id/button38"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType38"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime38"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime38"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="39"
+            android:id="@+id/button39"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType39"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime39"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime39"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40"
+            android:id="@+id/button40"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType40"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime40"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime40"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="41"
+            android:id="@+id/button41"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType41"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime41"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime41"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="42"
+            android:id="@+id/button42"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType42"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime42"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime42"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="43"
+            android:id="@+id/button43"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType43"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime43"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime43"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="44"
+            android:id="@+id/button44"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType44"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime44"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime44"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45"
+            android:id="@+id/button45"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType45"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime45"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime45"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="46"
+            android:id="@+id/button46"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType46"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime46"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime46"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+    <TableRow android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="47"
+            android:id="@+id/button47"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType47"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime47"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime47"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+
+    </TableRow>
+  <TableRow android:orientation="vertical">
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="48"
+          android:id="@+id/button48"
+          android:layout_column="0" />
+
+          <TextView
+            android:id="@+id/busType48"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/startTime48"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/viaTime48"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+
+  </TableRow>
+  <TableRow android:orientation="vertical">
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="49"
+          android:id="@+id/button49"
+          android:layout_column="0" />
+
+          <TextView
+            android:id="@+id/busType49"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/startTime49"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/viaTime49"
+            android:layout_height="45dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@android:color/white"
+            />
+
+  </TableRow>
+  <TableRow android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:id="@+id/button50"
+            android:layout_column="0" />
+
+            <TextView
+              android:id="@+id/busType50"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/startTime50"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+          <TextView
+              android:id="@+id/viaTime50"
+              android:layout_height="45dp"
+              android:textColor="@android:color/black"
+              android:gravity="center"
+              android:layout_weight="1"
+              android:layout_margin="1dp"
+              android:background="@android:color/white"
+              />
+    </TableRow>
+
+    <TableRow android:orientation="vertical">
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="51"
+              android:id="@+id/button51"
+              android:layout_column="0" />
+
+              <TextView
+                android:id="@+id/busType51"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime51"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime51"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+      </TableRow>
+      <TableRow android:orientation="vertical">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="52"
+                android:id="@+id/button52"
+                android:layout_column="0" />
+
+                <TextView
+                  android:id="@+id/busType52"
+                  android:layout_height="45dp"
+                  android:textColor="@android:color/black"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:layout_margin="1dp"
+                  android:background="@android:color/white"
+                  />
+              <TextView
+                  android:id="@+id/startTime52"
+                  android:layout_height="45dp"
+                  android:textColor="@android:color/black"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:layout_margin="1dp"
+                  android:background="@android:color/white"
+                  />
+              <TextView
+                  android:id="@+id/viaTime52"
+                  android:layout_height="45dp"
+                  android:textColor="@android:color/black"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:layout_margin="1dp"
+                  android:background="@android:color/white"
+                  />
+        </TableRow>
+        <TableRow android:orientation="vertical">
+              <Button
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="53"
+                  android:id="@+id/button53"
+                  android:layout_column="0" />
+
+                  <TextView
+                    android:id="@+id/busType53"
+                    android:layout_height="45dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"
+                    />
+                <TextView
+                    android:id="@+id/startTime53"
+                    android:layout_height="45dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"
+                    />
+                <TextView
+                    android:id="@+id/viaTime53"
+                    android:layout_height="45dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"
+                    />
+          </TableRow>
+          <TableRow android:orientation="vertical">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="54"
+                    android:id="@+id/button54"
+                    android:layout_column="0" />
+
+                    <TextView
+                      android:id="@+id/busType54"
+                      android:layout_height="45dp"
+                      android:textColor="@android:color/black"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:layout_margin="1dp"
+                      android:background="@android:color/white"
+                      />
+                  <TextView
+                      android:id="@+id/startTime54"
+                      android:layout_height="45dp"
+                      android:textColor="@android:color/black"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:layout_margin="1dp"
+                      android:background="@android:color/white"
+                      />
+                  <TextView
+                      android:id="@+id/viaTime54"
+                      android:layout_height="45dp"
+                      android:textColor="@android:color/black"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:layout_margin="1dp"
+                      android:background="@android:color/white"
+                      />
+            </TableRow>
+            <TableRow android:orientation="vertical">
+                  <Button
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="55"
+                      android:id="@+id/button55"
+                      android:layout_column="0" />
+
+                      <TextView
+                        android:id="@+id/busType55"
+                        android:layout_height="45dp"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@android:color/white"
+                        />
+                    <TextView
+                        android:id="@+id/startTime55"
+                        android:layout_height="45dp"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@android:color/white"
+                        />
+                    <TextView
+                        android:id="@+id/viaTime55"
+                        android:layout_height="45dp"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@android:color/white"
+                        />
+              </TableRow>
+              <TableRow android:orientation="vertical">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="56"
+                        android:id="@+id/button56"
+                        android:layout_column="0" />
+
+                        <TextView
+                          android:id="@+id/busType56"
+                          android:layout_height="45dp"
+                          android:textColor="@android:color/black"
+                          android:gravity="center"
+                          android:layout_weight="1"
+                          android:layout_margin="1dp"
+                          android:background="@android:color/white"
+                          />
+                      <TextView
+                          android:id="@+id/startTime56"
+                          android:layout_height="45dp"
+                          android:textColor="@android:color/black"
+                          android:gravity="center"
+                          android:layout_weight="1"
+                          android:layout_margin="1dp"
+                          android:background="@android:color/white"
+                          />
+                      <TextView
+                          android:id="@+id/viaTime56"
+                          android:layout_height="45dp"
+                          android:textColor="@android:color/black"
+                          android:gravity="center"
+                          android:layout_weight="1"
+                          android:layout_margin="1dp"
+                          android:background="@android:color/white"
+                          />
+                </TableRow>
+                <TableRow android:orientation="vertical">
+                      <Button
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="57"
+                          android:id="@+id/button57"
+                          android:layout_column="0" />
+
+                          <TextView
+                            android:id="@+id/busType57"
+                            android:layout_height="45dp"
+                            android:textColor="@android:color/black"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="@android:color/white"
+                            />
+                        <TextView
+                            android:id="@+id/startTime57"
+                            android:layout_height="45dp"
+                            android:textColor="@android:color/black"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="@android:color/white"
+                            />
+                        <TextView
+                            android:id="@+id/viaTime57"
+                            android:layout_height="45dp"
+                            android:textColor="@android:color/black"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="@android:color/white"
+                            />
+                  </TableRow>
+                  <TableRow android:orientation="vertical">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="58"
+                            android:id="@+id/button58"
+                            android:layout_column="0" />
+
+                            <TextView
+                              android:id="@+id/busType58"
+                              android:layout_height="45dp"
+                              android:textColor="@android:color/black"
+                              android:gravity="center"
+                              android:layout_weight="1"
+                              android:layout_margin="1dp"
+                              android:background="@android:color/white"
+                              />
+                          <TextView
+                              android:id="@+id/startTime58"
+                              android:layout_height="45dp"
+                              android:textColor="@android:color/black"
+                              android:gravity="center"
+                              android:layout_weight="1"
+                              android:layout_margin="1dp"
+                              android:background="@android:color/white"
+                              />
+                          <TextView
+                              android:id="@+id/viaTime58"
+                              android:layout_height="45dp"
+                              android:textColor="@android:color/black"
+                              android:gravity="center"
+                              android:layout_weight="1"
+                              android:layout_margin="1dp"
+                              android:background="@android:color/white"
+                              />
+                    </TableRow>
+                    <TableRow android:orientation="vertical">
+                          <Button
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="59"
+                              android:id="@+id/button59"
+                              android:layout_column="0" />
+
+                              <TextView
+                                android:id="@+id/busType59"
+                                android:layout_height="45dp"
+                                android:textColor="@android:color/black"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@android:color/white"
+                                />
+                            <TextView
+                                android:id="@+id/startTime59"
+                                android:layout_height="45dp"
+                                android:textColor="@android:color/black"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@android:color/white"
+                                />
+                            <TextView
+                                android:id="@+id/viaTime59"
+                                android:layout_height="45dp"
+                                android:textColor="@android:color/black"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@android:color/white"
+                                />
+                      </TableRow>
+
+                      <TableRow android:orientation="vertical">
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="60"
+                                android:id="@+id/button60"
+                                android:layout_column="0" />
+
+                                <TextView
+                                  android:id="@+id/busType60"
+                                  android:layout_height="45dp"
+                                  android:textColor="@android:color/black"
+                                  android:gravity="center"
+                                  android:layout_weight="1"
+                                  android:layout_margin="1dp"
+                                  android:background="@android:color/white"
+                                  />
+                              <TextView
+                                  android:id="@+id/startTime60"
+                                  android:layout_height="45dp"
+                                  android:textColor="@android:color/black"
+                                  android:gravity="center"
+                                  android:layout_weight="1"
+                                  android:layout_margin="1dp"
+                                  android:background="@android:color/white"
+                                  />
+                              <TextView
+                                  android:id="@+id/viaTime60"
+                                  android:layout_height="45dp"
+                                  android:textColor="@android:color/black"
+                                  android:gravity="center"
+                                  android:layout_weight="1"
+                                  android:layout_margin="1dp"
+                                  android:background="@android:color/white"
+                                  />
+                        </TableRow>
+
+    <TableRow android:orientation="vertical">
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="61"
+              android:id="@+id/button61"
+              android:layout_column="0" />
+
+              <TextView
+                android:id="@+id/busType61"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/startTime61"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/viaTime61"
+                android:layout_height="45dp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                />
+      </TableRow>
+      <TableRow android:orientation="vertical">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="62"
+                android:id="@+id/button62"
+                android:layout_column="0" />
+
+                <TextView
+                  android:id="@+id/busType62"
+                  android:layout_height="45dp"
+                  android:textColor="@android:color/black"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:layout_margin="1dp"
+                  android:background="@android:color/white"
+                  />
+              <TextView
+                  android:id="@+id/startTime62"
+                  android:layout_height="45dp"
+                  android:textColor="@android:color/black"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:layout_margin="1dp"
+                  android:background="@android:color/white"
+                  />
+              <TextView
+                  android:id="@+id/viaTime62"
+                  android:layout_height="45dp"
+                  android:textColor="@android:color/black"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:layout_margin="1dp"
+                  android:background="@android:color/white"
+                  />
+        </TableRow>
+        <TableRow android:orientation="vertical">
+              <Button
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="63"
+                  android:id="@+id/button63"
+                  android:layout_column="0" />
+
+                  <TextView
+                    android:id="@+id/busType63"
+                    android:layout_height="45dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"
+                    />
+                <TextView
+                    android:id="@+id/startTime63"
+                    android:layout_height="45dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"
+                    />
+                <TextView
+                    android:id="@+id/viaTime63"
+                    android:layout_height="45dp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="1dp"
+                    android:background="@android:color/white"
+                    />
+          </TableRow>
+          <TableRow android:orientation="vertical">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="64"
+                    android:id="@+id/button64"
+                    android:layout_column="0" />
+
+                    <TextView
+                      android:id="@+id/busType64"
+                      android:layout_height="45dp"
+                      android:textColor="@android:color/black"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:layout_margin="1dp"
+                      android:background="@android:color/white"
+                      />
+                  <TextView
+                      android:id="@+id/startTime64"
+                      android:layout_height="45dp"
+                      android:textColor="@android:color/black"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:layout_margin="1dp"
+                      android:background="@android:color/white"
+                      />
+                  <TextView
+                      android:id="@+id/viaTime64"
+                      android:layout_height="45dp"
+                      android:textColor="@android:color/black"
+                      android:gravity="center"
+                      android:layout_weight="1"
+                      android:layout_margin="1dp"
+                      android:background="@android:color/white"
+                      />
+            </TableRow>
+            <TableRow android:orientation="vertical">
+                  <Button
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="65"
+                      android:id="@+id/button65"
+                      android:layout_column="0" />
+
+                      <TextView
+                        android:id="@+id/busType65"
+                        android:layout_height="45dp"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@android:color/white"
+                        />
+                    <TextView
+                        android:id="@+id/startTime65"
+                        android:layout_height="45dp"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@android:color/white"
+                        />
+                    <TextView
+                        android:id="@+id/viaTime65"
+                        android:layout_height="45dp"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="1dp"
+                        android:background="@android:color/white"
+                        />
+              </TableRow>
+              <TableRow android:orientation="vertical">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="66"
+                        android:id="@+id/button66"
+                        android:layout_column="0" />
+
+                        <TextView
+                          android:id="@+id/busType66"
+                          android:layout_height="45dp"
+                          android:textColor="@android:color/black"
+                          android:gravity="center"
+                          android:layout_weight="1"
+                          android:layout_margin="1dp"
+                          android:background="@android:color/white"
+                          />
+                      <TextView
+                          android:id="@+id/startTime66"
+                          android:layout_height="45dp"
+                          android:textColor="@android:color/black"
+                          android:gravity="center"
+                          android:layout_weight="1"
+                          android:layout_margin="1dp"
+                          android:background="@android:color/white"
+                          />
+                      <TextView
+                          android:id="@+id/viaTime66"
+                          android:layout_height="45dp"
+                          android:textColor="@android:color/black"
+                          android:gravity="center"
+                          android:layout_weight="1"
+                          android:layout_margin="1dp"
+                          android:background="@android:color/white"
+                          />
+                </TableRow>
+                <TableRow android:orientation="vertical">
+                      <Button
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="67"
+                          android:id="@+id/button67"
+                          android:layout_column="0" />
+
+                          <TextView
+                            android:id="@+id/busType67"
+                            android:layout_height="45dp"
+                            android:textColor="@android:color/black"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="@android:color/white"
+                            />
+                        <TextView
+                            android:id="@+id/startTime67"
+                            android:layout_height="45dp"
+                            android:textColor="@android:color/black"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="@android:color/white"
+                            />
+                        <TextView
+                            android:id="@+id/viaTime67"
+                            android:layout_height="45dp"
+                            android:textColor="@android:color/black"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_margin="1dp"
+                            android:background="@android:color/white"
+                            />
+                  </TableRow>
+                  <TableRow android:orientation="vertical">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="68"
+                            android:id="@+id/button68"
+                            android:layout_column="0" />
+
+                            <TextView
+                              android:id="@+id/busType68"
+                              android:layout_height="45dp"
+                              android:textColor="@android:color/black"
+                              android:gravity="center"
+                              android:layout_weight="1"
+                              android:layout_margin="1dp"
+                              android:background="@android:color/white"
+                              />
+                          <TextView
+                              android:id="@+id/startTime68"
+                              android:layout_height="45dp"
+                              android:textColor="@android:color/black"
+                              android:gravity="center"
+                              android:layout_weight="1"
+                              android:layout_margin="1dp"
+                              android:background="@android:color/white"
+                              />
+                          <TextView
+                              android:id="@+id/viaTime68"
+                              android:layout_height="45dp"
+                              android:textColor="@android:color/black"
+                              android:gravity="center"
+                              android:layout_weight="1"
+                              android:layout_margin="1dp"
+                              android:background="@android:color/white"
+                              />
+                    </TableRow>
+                    <TableRow android:orientation="vertical">
+                          <Button
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="69"
+                              android:id="@+id/button69"
+                              android:layout_column="0" />
+
+                              <TextView
+                                android:id="@+id/busType69"
+                                android:layout_height="45dp"
+                                android:textColor="@android:color/black"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@android:color/white"
+                                />
+                            <TextView
+                                android:id="@+id/startTime69"
+                                android:layout_height="45dp"
+                                android:textColor="@android:color/black"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@android:color/white"
+                                />
+                            <TextView
+                                android:id="@+id/viaTime69"
+                                android:layout_height="45dp"
+                                android:textColor="@android:color/black"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                android:background="@android:color/white"
+                                />
+                      </TableRow>
+                      <TableRow android:orientation="vertical">
+                                  <Button
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:text="70"
+                                      android:id="@+id/button70"
+                                      android:layout_column="0" />
+
+                                      <TextView
+                                        android:id="@+id/busType70"
+                                        android:layout_height="45dp"
+                                        android:textColor="@android:color/black"
+                                        android:gravity="center"
+                                        android:layout_weight="1"
+                                        android:layout_margin="1dp"
+                                        android:background="@android:color/white"
+                                        />
+                                    <TextView
+                                        android:id="@+id/startTime70"
+                                        android:layout_height="45dp"
+                                        android:textColor="@android:color/black"
+                                        android:gravity="center"
+                                        android:layout_weight="1"
+                                        android:layout_margin="1dp"
+                                        android:background="@android:color/white"
+                                        />
+                                    <TextView
+                                        android:id="@+id/viaTime70"
+                                        android:layout_height="45dp"
+                                        android:textColor="@android:color/black"
+                                        android:gravity="center"
+                                        android:layout_weight="1"
+                                        android:layout_margin="1dp"
+                                        android:background="@android:color/white"
+                                        />
+                              </TableRow>
+
+                              <TableRow android:orientation="vertical">
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="71"
+                                        android:id="@+id/button71"
+                                        android:layout_column="0" />
+
+                                        <TextView
+                                          android:id="@+id/busType71"
+                                          android:layout_height="45dp"
+                                          android:textColor="@android:color/black"
+                                          android:gravity="center"
+                                          android:layout_weight="1"
+                                          android:layout_margin="1dp"
+                                          android:background="@android:color/white"
+                                          />
+                                      <TextView
+                                          android:id="@+id/startTime71"
+                                          android:layout_height="45dp"
+                                          android:textColor="@android:color/black"
+                                          android:gravity="center"
+                                          android:layout_weight="1"
+                                          android:layout_margin="1dp"
+                                          android:background="@android:color/white"
+                                          />
+                                      <TextView
+                                          android:id="@+id/viaTime71"
+                                          android:layout_height="45dp"
+                                          android:textColor="@android:color/black"
+                                          android:gravity="center"
+                                          android:layout_weight="1"
+                                          android:layout_margin="1dp"
+                                          android:background="@android:color/white"
+                                          />
+                                </TableRow>
+                                <TableRow android:orientation="vertical">
+                                      <Button
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:text="72"
+                                          android:id="@+id/button72"
+                                          android:layout_column="0" />
+
+                                          <TextView
+                                            android:id="@+id/busType72"
+                                            android:layout_height="45dp"
+                                            android:textColor="@android:color/black"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:layout_margin="1dp"
+                                            android:background="@android:color/white"
+                                            />
+                                        <TextView
+                                            android:id="@+id/startTime72"
+                                            android:layout_height="45dp"
+                                            android:textColor="@android:color/black"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:layout_margin="1dp"
+                                            android:background="@android:color/white"
+                                            />
+                                        <TextView
+                                            android:id="@+id/viaTime72"
+                                            android:layout_height="45dp"
+                                            android:textColor="@android:color/black"
+                                            android:gravity="center"
+                                            android:layout_weight="1"
+                                            android:layout_margin="1dp"
+                                            android:background="@android:color/white"
+                                            />
+                                  </TableRow>
+                                  <TableRow android:orientation="vertical">
+                                          <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="73"
+                                            android:id="@+id/button73"
+                                            android:layout_column="0" />
+
+                                            <TextView
+                                              android:id="@+id/busType73"
+                                              android:layout_height="45dp"
+                                              android:textColor="@android:color/black"
+                                              android:gravity="center"
+                                              android:layout_weight="1"
+                                              android:layout_margin="1dp"
+                                              android:background="@android:color/white"
+                                              />
+                                          <TextView
+                                              android:id="@+id/startTime73"
+                                              android:layout_height="45dp"
+                                              android:textColor="@android:color/black"
+                                              android:gravity="center"
+                                              android:layout_weight="1"
+                                              android:layout_margin="1dp"
+                                              android:background="@android:color/white"
+                                              />
+                                          <TextView
+                                              android:id="@+id/viaTime73"
+                                              android:layout_height="45dp"
+                                              android:textColor="@android:color/black"
+                                              android:gravity="center"
+                                              android:layout_weight="1"
+                                              android:layout_margin="1dp"
+                                              android:background="@android:color/white"
+                                              />
+                                    </TableRow>
+                                    <TableRow android:orientation="vertical">
+                                          <Button
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:text="74"
+                                              android:id="@+id/button74"
+                                              android:layout_column="0" />
+
+                                              <TextView
+                                                android:id="@+id/busType74"
+                                                android:layout_height="45dp"
+                                                android:textColor="@android:color/black"
+                                                android:gravity="center"
+                                                android:layout_weight="1"
+                                                android:layout_margin="1dp"
+                                                android:background="@android:color/white"
+                                                />
+                                            <TextView
+                                                android:id="@+id/startTime74"
+                                                android:layout_height="45dp"
+                                                android:textColor="@android:color/black"
+                                                android:gravity="center"
+                                                android:layout_weight="1"
+                                                android:layout_margin="1dp"
+                                                android:background="@android:color/white"
+                                                />
+                                            <TextView
+                                                android:id="@+id/viaTime74"
+                                                android:layout_height="45dp"
+                                                android:textColor="@android:color/black"
+                                                android:gravity="center"
+                                                android:layout_weight="1"
+                                                android:layout_margin="1dp"
+                                                android:background="@android:color/white"
+                                                />
+                                      </TableRow>
+                                    <TableRow android:orientation="vertical">
+                                            <Button
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="75"
+                                                android:id="@+id/button75"
+                                                android:layout_column="0" />
+
+                                                <TextView
+                                                  android:id="@+id/busType75"
+                                                  android:layout_height="45dp"
+                                                  android:textColor="@android:color/black"
+                                                  android:gravity="center"
+                                                  android:layout_weight="1"
+                                                  android:layout_margin="1dp"
+                                                  android:background="@android:color/white"
+                                                  />
+                                              <TextView
+                                                  android:id="@+id/startTime75"
+                                                  android:layout_height="45dp"
+                                                  android:textColor="@android:color/black"
+                                                  android:gravity="center"
+                                                  android:layout_weight="1"
+                                                  android:layout_margin="1dp"
+                                                  android:background="@android:color/white"
+                                                  />
+                                              <TextView
+                                                  android:id="@+id/viaTime75"
+                                                  android:layout_height="45dp"
+                                                  android:textColor="@android:color/black"
+                                                  android:gravity="center"
+                                                  android:layout_weight="1"
+                                                  android:layout_margin="1dp"
+                                                  android:background="@android:color/white"
+                                                  />
+                                        </TableRow>
+
+</TableLayout>
+
+</ScrollView>
