@@ -115,11 +115,31 @@ public class MyiWeb extends AppCompatActivity
                         "}" +
                         "}" +
                         "var a = myFunction();" +
+                        "};");
+                frontWebView.loadUrl("javascript: {" +
+                        "var x = document.getElementsByTagName('img');" +
+                        "var i = 0;" +
+                        "function myFunction(){" +
+                        "for(i=0;i<x.length; i++){" +
+                        "x[i].width='57px';" +
+                        "}" +
+                        "}" +
+                        "var a = myFunction();" +
+                        "};");
+                frontWebView.loadUrl("javascript: {" +
+                        "var x = document.getElementsByTagName('table');" +
+                        "var i = 0;" +
+                        "function myFunction(){" +
+                        "for(i=0;i<x.length; i++){" +
+                        "x[i].width='300px';" +
+                        "}" +
+                        "}" +
+                        "var a = myFunction();" +
                          "};");
-
 
             }
         });
+
     }
 
 
