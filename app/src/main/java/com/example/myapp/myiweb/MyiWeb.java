@@ -73,9 +73,9 @@ public class MyiWeb extends AppCompatActivity
                 hiddenWebView.loadUrl("javascript: {" +
                         "document.getElementById('userID').value = '" + email + "';" +
                         "document.getElementById('userPW').value = '" + password + "';" +
-                        "var a = document.getElementsByTagName('input');"+
+                        "var a = document.getElementsByTagName('input');" +
                         "a.CheckSubmit()"
-                        +"};");
+                        + "};");
 
                 hiddenWebView.loadUrl("javascript:CheckSubmit()");
             }
@@ -86,6 +86,19 @@ public class MyiWeb extends AppCompatActivity
         frontWebView.getSettings().setDatabaseEnabled(true);
         frontWebView.getSettings().setJavaScriptEnabled(true);
         frontWebView.setWebViewClient(new WebClient());
+        frontWebView.setWebViewClient(new WebClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                frontWebView.loadUrl("javascript: {" +
+                        "$(document).hide();" +
+                        "$(table).show();" +
+                        "$(tr).show();" +
+                        "$(td).show();" +
+                        "};");
+
+                //frontWebView.loadUrl("javascript:CheckSubmit()");
+            }
+        });
     }
 
 
@@ -152,6 +165,32 @@ public class MyiWeb extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    private String getCSSForTable(){
+        String cssString;
+        cssString = "<style>"+
+                ".TableStyle {"+
+                "margin:0px;padding:0px;"+
+                "width:100%;"+
+                "box-shadow: 10px 10px 5px #888888;"+
+                "border:1px solid #07214f;"+
+                "-moz-border-radius-bottomleft:0px;"+
+                "-webkit-border-bottom-left-radius:0px;"+
+                "border-bottom-left-radius:0px;"+
+                "-moz-border-radius-bottomright:0px;"+
+                "-webkit-border-bottom-right-radius:0px;"+
+                "border-bottom-right-radius:0px;"+
+                "-moz-border-radius-topright:0px;"+
+                "-webkit-border-top-right-radius:0px;"+
+                "border-top-right-radius:0px;"+
+                "-moz-border-radius-topleft:0px;"+
+                "-webkit-border-top-left-radius:0px;"+
+                "border-top-left-radius:0px;"+
+                "}"+
+                "</style>";
+        return cssString;
+    }
+
+
 }
 class WebClient extends WebViewClient {
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
