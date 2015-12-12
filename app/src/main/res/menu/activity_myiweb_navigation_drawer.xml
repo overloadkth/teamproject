@@ -7,7 +7,6 @@
                 <group android:checkableBehavior="single">
                     <item
                         android:id="@+id/nav_diploma"
-                        android:icon="@drawable/ic_menu_share"
                         android:title="성적조회" />
                 </group>
             </menu>
@@ -17,15 +16,12 @@
                 <group android:checkableBehavior="single">
                     <item
                         android:id="@+id/nav_bank"
-                        android:icon="@drawable/ic_menu_share"
                         android:title="장학금계좌정보입력" />
                     <item
                         android:id="@+id/nav_scholarship"
-                        android:icon="@drawable/ic_menu_send"
                         android:title="장학금신청" />
                     <item
                         android:id="@+id/nav_scholarRecord"
-                        android:icon="@drawable/ic_menu_send"
                         android:title="장학수혜내역조회" />
                      </group>
             </menu>
@@ -35,11 +31,9 @@
                 <group android:checkableBehavior="single">
                     <item
                         android:id="@+id/nav_seeToeic"
-                        android:icon="@drawable/ic_menu_share"
                         android:title="모의토익신청" />
                     <item
                         android:id="@+id/nav_toeicScore"
-                        android:icon="@drawable/ic_menu_send"
                         android:title="토익성적조회" />
                 </group>
             </menu>
