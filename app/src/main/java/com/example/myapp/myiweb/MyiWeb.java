@@ -1,6 +1,7 @@
 package com.example.myapp.myiweb;
 
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
@@ -11,10 +12,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -26,13 +30,13 @@ import org.jsoup.select.Elements;
 public class MyiWeb extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
     private WebView hiddenWebView;
     private WebView frontWebView;
     private String email;
     private String password;
     boolean doneOnce=false;
-    Document document = null;
-    public Elements tables;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +53,6 @@ public class MyiWeb extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -66,8 +62,6 @@ public class MyiWeb extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
 
         hiddenWebView = (WebView) findViewById(R.id.hiddenWV);
         hiddenWebView.clearCache(true);
@@ -103,8 +97,12 @@ public class MyiWeb extends AppCompatActivity
         frontWebView.clearCache(true);
         frontWebView.getSettings().setDatabaseEnabled(true);
         frontWebView.getSettings().setJavaScriptEnabled(true);
+        frontWebView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        frontWebView.setHorizontalScrollBarEnabled(false);
+        frontWebView.setPadding(0, 0, 0, 0);
 //        frontWebView.setWebChromeClient(new WebChromeClient());
 ////
+
         frontWebView.setWebViewClient(new WebClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
@@ -119,30 +117,11 @@ public class MyiWeb extends AppCompatActivity
                         "var a = myFunction();" +
                          "};");
 
-                //frontWebView.loadUrl("javascript:CheckSubmit()");
+
             }
         });
     }
-//    class WebViewParser extends AsyncTask<String, Void, Document>{
-//        private Document doc;
-//        private int data = 0;
-//
-//        public WebViewParser(){
-//
-//            doc=null;
-//        }
-//
-//        @Override
-//        protected Document doInBackground( String... params){
-//            try {
-//                doc = Jsoup.connect(params[0]).get();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//            return doc;
-//        }
-//
-//    }
+
 
     @Override
     public void onBackPressed() {
@@ -156,19 +135,15 @@ public class MyiWeb extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.myiweb_navigation, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -181,40 +156,20 @@ public class MyiWeb extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        //frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd="+email);
-//        } else if (id == R.id.nav_evaluate) {
-//            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=60122469");
-//        } else if (id == R.id.nav_withdraw) {
-//            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=60122469");
         if (id == R.id.nav_diploma) {
             //  try {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=" + email);
-//            try {
-//                document = Jsoup.connect("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=" + email).get();
-////                Elements ele = document.select("html");
-////                tables = ele.select("html");
-////
-//
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-
-//                tables = document.select("html body form table tbody tr");
-//                hiddenWebView.loadData(tables.toString(), "text/html", "UTF-8");
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//        }
         }else if (id == R.id.nav_bank) {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl06?attribute=accfirstLoad");
         } else if (id == R.id.nav_scholarship) {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl06?attribute=firstLoad");
         } else if (id == R.id.nav_scholarRecord) {
-            hiddenWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl05?attribute=getScholarSchs&studentCd="+email);
-        } else if (id == R.id.nav_seeToeic) {
-            hiddenWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh05.Suh05Svl01?attribute=datecheck&studentCd="+email);
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl05?attribute=getScholarSchs&studentCd="+email);
 
+        } else if (id == R.id.nav_seeToeic) {
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh05.Suh05Svl01?attribute=datecheck&studentCd="+email);
         } else if (id == R.id.nav_toeicScore) {
-            hiddenWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh05.Suh05Svl01?attribute=sel_toeic&studentCd="+email);
+            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh05.Suh05Svl01?attribute=sel_toeic&studentCd="+email);
 
         }
 
