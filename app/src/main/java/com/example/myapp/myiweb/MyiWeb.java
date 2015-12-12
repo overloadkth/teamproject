@@ -1,19 +1,11 @@
 package com.example.myapp.myiweb;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.renderscript.Element;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.util.Base64;
-import android.util.Log;
-import android.view.Display;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -21,22 +13,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
+import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
 
 import com.example.myapp.R;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.ref.WeakReference;
-import java.net.URL;
-import java.util.concurrent.ExecutionException;
 
 public class MyiWeb extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -94,16 +79,7 @@ public class MyiWeb extends AppCompatActivity
         hiddenWebView.setWebViewClient(new WebClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-<<<<<<< HEAD
-                hiddenWebView.loadUrl("javascript: {" +
-                        "document.getElementById('userID').value = '" + email + "';" +
-                        "document.getElementById('userPW').value = '" + password + "';" +
-                        "var a = document.getElementsByTagName('input');" +
-                        "a.CheckSubmit()"
-                        + "};");
 
-                hiddenWebView.loadUrl("javascript:CheckSubmit()");
-=======
                 if (!doneOnce) {
                     hiddenWebView.loadUrl("javascript: {" +
                             "document.getElementById('userID').value = '" + email + "';" +
@@ -115,7 +91,7 @@ public class MyiWeb extends AppCompatActivity
                     hiddenWebView.loadUrl("javascript:CheckSubmit()");
                     doneOnce = true;
                 }
->>>>>>> origin/master
+
             }
         });
 
@@ -127,17 +103,21 @@ public class MyiWeb extends AppCompatActivity
         frontWebView.clearCache(true);
         frontWebView.getSettings().setDatabaseEnabled(true);
         frontWebView.getSettings().setJavaScriptEnabled(true);
-        frontWebView.setInitialScale(getScale());
-        frontWebView.setWebViewClient(new WebClient());
+//        frontWebView.setWebChromeClient(new WebChromeClient());
+////
         frontWebView.setWebViewClient(new WebClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
                 frontWebView.loadUrl("javascript: {" +
-                        "$(document).hide();" +
-                        "$(table).show();" +
-                        "$(tr).show();" +
-                        "$(td).show();" +
-                        "};");
+                        "var x = document.getElementsByTagName('*');" +
+                        "var i = 0;" +
+                        "function myFunction(){" +
+                        "for(i=0;i<x.length; i++){" +
+                        "x[i].width='300px';" +
+                        "}" +
+                        "}" +
+                        "var a = myFunction();" +
+                         "};");
 
                 //frontWebView.loadUrl("javascript:CheckSubmit()");
             }
@@ -200,7 +180,6 @@ public class MyiWeb extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        injectCSS();
 
         //frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd="+email);
 //        } else if (id == R.id.nav_evaluate) {
@@ -244,7 +223,6 @@ public class MyiWeb extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-<<<<<<< HEAD
     private String getCSSForTable(){
         String cssString;
         cssString = "<style>"+
@@ -270,40 +248,6 @@ public class MyiWeb extends AppCompatActivity
         return cssString;
     }
 
-
-}
-class WebClient extends WebViewClient {
-    public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        view.loadUrl(url);
-        return true;
-    }
-=======
-    private int getScale(){
-        Display display = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-        int width = display.getWidth();
-        Double val = new Double(width)/new Double(PIC_WIDTH);
-        val = val * 100d;
-        return val.intValue();
-    }
-    private void injectCSS() {
-        try {
-            InputStream inputStream = getAssets().open("style.css");
-            byte[] buffer = new byte[inputStream.available()];
-            inputStream.read(buffer);
-            inputStream.close();
-            String encoded = Base64.encodeToString(buffer, Base64.NO_WRAP);
-            hiddenWebView.loadUrl("javascript:(function() {" +
-                    "var parent = document.getElementsByTagName('head').item(0);" +
-                    "var style = document.createElement('style');" +
-                    "style.type = 'text/css';" +
-                    // Tell the browser to BASE64-decode the string into your script !!!
-                    "style.innerHTML = window.atob('" + encoded + "');" +
-                    "parent.appendChild(style)" +
-                    "})()");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     class WebClient extends WebViewClient {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
@@ -311,5 +255,5 @@ class WebClient extends WebViewClient {
             return true;
         }
     }
->>>>>>> origin/master
+
 }
