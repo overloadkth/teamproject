@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 
-import com.example.myapp.myiweb.myiwebLoginActivity;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends Activity {
@@ -21,14 +20,16 @@ public class MainActivity extends Activity {
     private Intent foodTable;
     private Intent BusTable;
     private Intent myiWeb;
+    private Intent Kakao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         foodTable = new Intent(getApplicationContext(), FoodTableActivity.class);
-        BusTable = new Intent(getApplicationContext(), BusTable.class);
-        myiWeb = new Intent(getApplicationContext(), myiwebLoginActivity.class);
+        BusTable = new Intent(getApplicationContext(), BusTableActivity.class);
+        myiWeb = new Intent(getApplicationContext(), MyiWeb.class);
+        Kakao = new Intent(getApplicationContext(), Kakao.class);
 
         Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new OnClickListener() {
@@ -45,19 +46,18 @@ public class MainActivity extends Activity {
                 startActivity(BusTable);
             }
         });
-        Button button3 = (Button)findViewById(R.id.button3);
-        button3.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TimeTableActivity.class);
-                startActivity(intent);
-            }
-        });
         Button button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(myiWeb);
+            }
+        });
+        Button button5 = (Button) findViewById(R.id.button5);
+        button5.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(Kakao);
             }
         });
     }

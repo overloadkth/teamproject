@@ -69,5 +69,24 @@
         </TableRow>
     </TableLayout>
 
+<<<<<<< HEAD
+=======
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Myiweb"
+            android:id="@+id/button4"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.15" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카카오톡"
+            android:id="@+id/button5"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.15" />
+    </LinearLayout>
+>>>>>>> origin/master
 
 </RelativeLayout>
