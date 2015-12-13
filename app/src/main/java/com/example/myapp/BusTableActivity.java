@@ -15,7 +15,7 @@ public class BusTableActivity extends AppCompatActivity {
     private Intent BusTable_Button1;
     private Intent BusTable_Button2;
     private Intent BusTable_Button3;
-    private Intent BusTable_Button4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +54,6 @@ public class BusTableActivity extends AppCompatActivity {
                 Intent intent  = new Intent (getApplicationContext(), BusTable_Button3.class);
                 startActivity(intent);}
         });
-        Button button4 = (Button)findViewById(R.id.button8);
-        button4.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent (getApplicationContext(), BusTable_Button4.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }

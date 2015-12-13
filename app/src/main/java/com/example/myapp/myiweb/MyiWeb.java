@@ -32,7 +32,7 @@ import org.jsoup.select.Elements;
 public class MyiWeb extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    Toolbar toolbar;
     private WebView hiddenWebView;
     private WebView frontWebView;
     private ImageView imageView;
@@ -53,7 +53,7 @@ public class MyiWeb extends AppCompatActivity
         email = bundle.getString("ID");
         password = bundle.getString("PW");
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
@@ -176,20 +176,23 @@ public class MyiWeb extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_diploma) {
-            //  try {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=" + email);
+            toolbar.setTitle("성적조회");
         }else if (id == R.id.nav_bank) {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl06?attribute=accfirstLoad");
+            toolbar.setTitle("장학금 계좌정보 입력");
         } else if (id == R.id.nav_scholarship) {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl06?attribute=firstLoad");
+            toolbar.setTitle("장학금 신청");
         } else if (id == R.id.nav_scholarRecord) {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sub.sub02.Sub02Svl05?attribute=getScholarSchs&studentCd="+email);
-
+            toolbar.setTitle("장학수혜내역 조회");
         } else if (id == R.id.nav_seeToeic) {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh05.Suh05Svl01?attribute=datecheck&studentCd="+email);
+            toolbar.setTitle("모의토익신청");
         } else if (id == R.id.nav_toeicScore) {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh05.Suh05Svl01?attribute=sel_toeic&studentCd="+email);
-
+            toolbar.setTitle("토익성적조회");
         }
 
 

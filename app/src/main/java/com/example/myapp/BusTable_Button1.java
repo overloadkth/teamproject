@@ -567,6 +567,13 @@ public class BusTable_Button1 extends AppCompatActivity {
                 Time2 = BusTable.get(373);
             }
         }
+        else if ( currentHour <= 23){
+            if (currentMin <= 59) {
+                Bus = BusTable.get(371);
+                Time1 = BusTable.get(372);
+                Time2 = BusTable.get(373);
+            }
+        }
     }
 }
 
