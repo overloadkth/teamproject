@@ -46,7 +46,7 @@
         <activity android:name=".BusTable_Button2" />
         <activity android:name=".BusTable_Button3" />
         <activity android:name=".BusTable_Button4" />
-
+        <activity android:name=".Kakao" />
         <receiver android:name=".FoodTableWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -61,10 +61,7 @@
             android:name=".TimeTableActivity"
             android:label="@string/title_activity_time_table"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".myiweb.MyiwebNavigation"
-            android:label="@string/title_activity_myiweb_navigation"
-            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>
