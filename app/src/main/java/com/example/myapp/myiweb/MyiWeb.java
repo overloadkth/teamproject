@@ -176,7 +176,6 @@ public class MyiWeb extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_diploma) {
-            //  try {
             frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=" + email);
             toolbar.setTitle("성적조회");
         }else if (id == R.id.nav_bank) {
