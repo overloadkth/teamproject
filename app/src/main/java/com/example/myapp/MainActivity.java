@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.view.View.OnClickListener;
 
 import com.example.myapp.myiweb.MyiWeb;
+import com.example.myapp.myiweb.myiwebLoginActivity;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends Activity {
@@ -29,7 +30,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         foodTable = new Intent(getApplicationContext(), FoodTableActivity.class);
         BusTable = new Intent(getApplicationContext(), BusTableActivity.class);
-        myiWeb = new Intent(getApplicationContext(), MyiWeb.class);
+        myiWeb = new Intent(getApplicationContext(), myiwebLoginActivity.class);
         Kakao = new Intent(getApplicationContext(), Kakao.class);
 
         Button button1 = (Button) findViewById(R.id.button1);

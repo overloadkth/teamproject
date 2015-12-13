@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_weight="0.15" >
         <Button
-            android:paddingTop="60dp"
+            android:paddingTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="식단"
@@ -32,7 +32,7 @@
             android:background="@drawable/mainbuttons"
             android:layout_weight="0.15" />/>
         <Button
-            android:paddingTop="60dp"
+            android:paddingTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="버스시간표"
@@ -76,6 +76,12 @@
                 android:layout_weight="0.15" />
         </TableRow>
     </TableLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/logo"/>
 
 
 </RelativeLayout>

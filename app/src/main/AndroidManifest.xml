@@ -42,6 +42,10 @@
             android:name=".BusTable"
             android:label="@string/title_activity_bus_table"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BusTableActivity"
+            android:label="@string/title_activity_bus_table"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".BusTable_Button1" />
         <activity android:name=".BusTable_Button2" />
         <activity android:name=".BusTable_Button3" />
