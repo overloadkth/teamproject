@@ -1,17 +1,17 @@
 package com.meromgreen.mjuapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.meromgreen.mjuapp.myiweb.myiwebLoginActivity;
 import com.meromgreen.mjuapp.timetable.timetableLoginActivity;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends Activity {
     /**
@@ -72,6 +72,7 @@ public class MainActivity extends Activity {
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
