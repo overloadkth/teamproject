@@ -89,7 +89,7 @@ class KakaoLink {
 
     private static KakaoLink kakaoLink = null;
 
-    private static String KakaoLinkApiVersion = "2.0";
+    private static String KakaoLinkApiVersion = "5.2.2";
     private static String KakaoLinkURLBaseString = "kakaolink://sendurl";
 
     private static Charset KakaoLinkCharset = Charset.forName("UTF-8");
