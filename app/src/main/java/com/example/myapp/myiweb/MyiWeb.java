@@ -116,16 +116,7 @@ public class MyiWeb extends AppCompatActivity
                         "}" +
                         "var a = myFunction();" +
                         "};");
-                frontWebView.loadUrl("javascript: {" +
-                        "var x = document.getElementsByTagName('img');" +
-                        "var i = 0;" +
-                        "function myFunction(){" +
-                        "for(i=0;i<x.length; i++){" +
-                        "x[i].width='57px';" +
-                        "}" +
-                        "}" +
-                        "var a = myFunction();" +
-                        "};");
+
                 frontWebView.loadUrl("javascript: {" +
                         "var x = document.getElementsByTagName('table');" +
                         "var i = 0;" +
@@ -198,30 +189,7 @@ public class MyiWeb extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    private String getCSSForTable(){
-        String cssString;
-        cssString = "<style>"+
-                ".TableStyle {"+
-                "margin:0px;padding:0px;"+
-                "width:100%;"+
-                "box-shadow: 10px 10px 5px #888888;"+
-                "border:1px solid #07214f;"+
-                "-moz-border-radius-bottomleft:0px;"+
-                "-webkit-border-bottom-left-radius:0px;"+
-                "border-bottom-left-radius:0px;"+
-                "-moz-border-radius-bottomright:0px;"+
-                "-webkit-border-bottom-right-radius:0px;"+
-                "border-bottom-right-radius:0px;"+
-                "-moz-border-radius-topright:0px;"+
-                "-webkit-border-top-right-radius:0px;"+
-                "border-top-right-radius:0px;"+
-                "-moz-border-radius-topleft:0px;"+
-                "-webkit-border-top-left-radius:0px;"+
-                "border-top-left-radius:0px;"+
-                "}"+
-                "</style>";
-        return cssString;
-    }
+
 
     class WebClient extends WebViewClient {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
