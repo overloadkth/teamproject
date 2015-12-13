@@ -21,38 +21,36 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="120dp"
+            android:drawableTop="@drawable/ic_directions_bus_black_48dp"
             android:text="셔틀버스 (학기중 : 계절학기 포함, 평일)"
             android:id="@+id/button"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_weight="0.1" />
+            android:layout_weight="0.1"
+            android:background="#ffffff" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="120dp"
+            android:drawableTop="@drawable/ic_directions_bus_black_48dp"
             android:text="셔틀버스(공휴일 : 학기중)"
             android:id="@+id/button6"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.1" />
+            android:layout_weight="0.1"
+            android:background="#ffffff" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="120dp"
+            android:drawableTop="@drawable/ic_directions_bus_black_48dp"
             android:text="셔틀버스(방학중 : 공휴일 포함)"
             android:id="@+id/button7"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.1" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:text="설정"
-            android:id="@+id/button8"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.1" />
+            android:layout_weight="0.1"
+            android:background="#ffffff" />
 
     </LinearLayout>
 
