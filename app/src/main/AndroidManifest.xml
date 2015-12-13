@@ -30,7 +30,15 @@
             android:label="@string/title_activity_myiweb"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".timetable.TimeTable"
+            android:label="@string/title_activity_time_table"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".myiweb.myiwebLoginActivity"
+            android:label="@string/title_activity_myiweb_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".timetable.timetableLoginActivity"
             android:label="@string/title_activity_myiweb_login"
             android:theme="@style/AppTheme.NoActionBar" />
 

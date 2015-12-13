@@ -11,6 +11,8 @@ import android.view.View.OnClickListener;
 
 import com.example.myapp.myiweb.MyiWeb;
 import com.example.myapp.myiweb.myiwebLoginActivity;
+import com.example.myapp.timetable.TimeTable;
+import com.example.myapp.timetable.timetableLoginActivity;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends Activity {
@@ -21,6 +23,7 @@ public class MainActivity extends Activity {
     private GoogleApiClient client;
     private Intent foodTable;
     private Intent BusTable;
+    private Intent TimeTable;
     private Intent myiWeb;
     private Intent Kakao;
 
@@ -30,6 +33,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         foodTable = new Intent(getApplicationContext(), FoodTableActivity.class);
         BusTable = new Intent(getApplicationContext(), BusTableActivity.class);
+        TimeTable = new Intent(getApplicationContext(), timetableLoginActivity.class);
         myiWeb = new Intent(getApplicationContext(), myiwebLoginActivity.class);
         Kakao = new Intent(getApplicationContext(), Kakao.class);
 
@@ -46,6 +50,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v){
                 startActivity(BusTable);
+            }
+        });
+        Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v){
+                startActivity(TimeTable);
             }
         });
         Button button4 = (Button) findViewById(R.id.button4);
