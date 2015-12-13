@@ -101,7 +101,7 @@ public class BusTable_Button1 extends AppCompatActivity {
         long totalMin = totalSeconds / 60;
         long currentMin = totalMin % 60;
         long totalHours = totalMin / 60;
-        long currentHour = totalHours % 24;
+        long currentHour = (totalHours+9) % 24 ;
 
         Document doc = null;
         try {
@@ -559,10 +559,9 @@ public class BusTable_Button1 extends AppCompatActivity {
               Bus = BusTable.get(366);
               Time1 = BusTable.get(367);
               Time2 = BusTable.get(368);
+
           }
-        }
-        else if(currentHour <= 24) {
-            if (currentMin <= 59) {
+          else  if (currentMin <= 59) {
                 Bus = BusTable.get(371);
                 Time1 = BusTable.get(372);
                 Time2 = BusTable.get(373);
