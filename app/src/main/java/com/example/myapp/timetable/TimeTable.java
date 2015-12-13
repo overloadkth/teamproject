@@ -1,36 +1,48 @@
 package com.example.myapp.timetable;
 
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.example.myapp.R;
 
-public class TimeTable extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+public class TimeTable extends AppCompatActivity {
+
 
     private WebView hiddenWebView;
     private WebView frontWebView;
     private String email;
     private String password;
+    boolean doneOnce = false;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_myiweb_navigation);
+        setContentView(R.layout.activity_time_table_navigation);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -40,25 +52,8 @@ public class TimeTable extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-
 
         hiddenWebView = (WebView) findViewById(R.id.hiddenWV);
         hiddenWebView.clearCache(true);
@@ -70,84 +65,70 @@ public class TimeTable extends AppCompatActivity
         hiddenWebView.setWebViewClient(new WebClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                hiddenWebView.loadUrl("javascript: {" +
-                        "document.getElementById('userID').value = '" + email + "';" +
-                        "document.getElementById('userPW').value = '" + password + "';" +
-                        "var a = document.getElementsByTagName('input');"+
-                        "a.CheckSubmit()"
-                        +"};");
 
-                hiddenWebView.loadUrl("javascript:CheckSubmit()");
+                if (!doneOnce) {
+                    hiddenWebView.loadUrl("javascript: {" +
+                            "document.getElementById('userID').value = '" + email + "';" +
+                            "document.getElementById('userPW').value = '" + password + "';" +
+                            "var a = document.getElementsByTagName('input');" +
+                            "a.CheckSubmit()"
+                            + "};");
+
+                    hiddenWebView.loadUrl("javascript:CheckSubmit()");
+                    doneOnce = true;
+                }
+
             }
         });
+
 
         frontWebView = (WebView) findViewById(R.id.frontWV);
         frontWebView.clearCache(true);
         frontWebView.getSettings().setDatabaseEnabled(true);
         frontWebView.getSettings().setJavaScriptEnabled(true);
-        frontWebView.setWebViewClient(new WebClient());
+        frontWebView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        frontWebView.setHorizontalScrollBarEnabled(false);
+        frontWebView.setPadding(0, 0, 0, 0);
+//        frontWebView.setWebChromeClient(new WebChromeClient());
+////
+
+        frontWebView.setWebViewClient(new WebClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                frontWebView.loadUrl("javascript: {" +
+                        "var x = document.getElementsByTagName('*');" +
+                        "var i = 0;" +
+                        "function myFunction(){" +
+                        "for(i=0;i<x.length; i++){" +
+                        "x[i].width='300px';" +
+                        "}" +
+                        "}" +
+                        "var a = myFunction();" +
+                        "};");
+
+                frontWebView.loadUrl("javascript: {" +
+                        "var x = document.getElementsByTagName('table');" +
+                        "var i = 0;" +
+                        "function myFunction(){" +
+                        "for(i=0;i<x.length; i++){" +
+                        "x[i].width='300px';" +
+                        "}" +
+                        "}" +
+                        "var a = myFunction();" +
+                        "};");
+
+            }
+        });
+        frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.sug.sug01.Sug01Svl03?attribute=sug240_int");
     }
 
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
+    class WebClient extends WebViewClient {
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.myiweb_navigation, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
             return true;
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_diploma) {
-            frontWebView.loadUrl("https://myiweb.mju.ac.kr/servlet/su.suh.suh03.Suh03Svl02?attribute=getGrade&studentCd=60122469");
-        } else if (id == R.id.nav_bank) {
-
-        } else if (id == R.id.nav_scholarship) {
-
-        } else if (id == R.id.nav_seeToeic) {
-
-        } else if (id == R.id.nav_toeicScore) {
-
-        }
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-}
-class WebClient extends WebViewClient {
-    public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        view.loadUrl(url);
-        return true;
-    }
 }
