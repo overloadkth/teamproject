@@ -2,6 +2,7 @@ package com.example.myapp.myiweb;
 
 import android.content.Intent;
 import android.graphics.Point;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
@@ -21,6 +22,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 
 import com.example.myapp.R;
 
@@ -33,6 +35,7 @@ public class MyiWeb extends AppCompatActivity
 
     private WebView hiddenWebView;
     private WebView frontWebView;
+    private ImageView imageView;
     private String email;
     private String password;
     boolean doneOnce=false;
@@ -62,6 +65,8 @@ public class MyiWeb extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        imageView = (ImageView) findViewById(R.id.greet);
 
         hiddenWebView = (WebView) findViewById(R.id.hiddenWV);
         hiddenWebView.clearCache(true);
@@ -165,6 +170,9 @@ public class MyiWeb extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
+        imageView.setVisibility(View.INVISIBLE);
+
         int id = item.getItemId();
 
         if (id == R.id.nav_diploma) {
