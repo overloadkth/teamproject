@@ -11,58 +11,63 @@
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width = "40dp"
-        android:layout_height = "40dp"
+        android:layout_width = "70dp"
+        android:layout_height = "48dp"
         android:text = "월"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="@drawable/mainbuttons"/>
 
     <Button
         android:id="@+id/btn2"
-        android:layout_width = "40dp"
-        android:layout_height = "40dp"
+        android:layout_width = "70dp"
+        android:layout_height = "48dp"
         android:text = "화"
         android:layout_alignBottom="@+id/btn1"
         android:layout_toRightOf="@+id/btn1"
         android:layout_toEndOf="@+id/btn1"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="@drawable/mainbuttons"/>
 
     <Button
         android:id="@+id/btn3"
-        android:layout_width = "40dp"
-        android:layout_height = "40dp"
+        android:layout_width = "70dp"
+        android:layout_height = "48dp"
         android:text = "수"
         android:layout_alignTop="@+id/btn2"
         android:layout_toRightOf="@+id/btn2"
         android:layout_toEndOf="@+id/btn2"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="@drawable/mainbuttons" />
 
     <Button
         android:id="@+id/btn4"
-        android:layout_width = "40dp"
-        android:layout_height = "40dp"
+        android:layout_width = "70dp"
+        android:layout_height = "48dp"
         android:text = "목"
         android:layout_alignTop="@+id/btn3"
         android:layout_toRightOf="@+id/btn3"
         android:layout_toEndOf="@+id/btn3"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="@drawable/mainbuttons"/>
 
     <Button
         android:id="@+id/btn5"
-        android:layout_width = "40dp"
-        android:layout_height = "40dp"
+        android:layout_width = "70dp"
+        android:layout_height = "48dp"
         android:text = "금"
         android:layout_alignBottom="@+id/btn1"
         android:layout_toRightOf="@+id/btn4"
         android:layout_toEndOf="@+id/btn4"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="@drawable/mainbuttons"/>
 
     <TextView
         android:layout_width="wrap_content"

@@ -1,7 +1,9 @@
 package com.example.myapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.annotation.ColorRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -45,15 +47,43 @@ public class FoodTableActivity extends Activity {
         textview5 = (TextView) findViewById(R.id.textView5);
         textview8 = (TextView) findViewById(R.id.textView8);
         textview10 = (TextView) findViewById(R.id.textView10);
-
-        setFoodTable_ST(weekDay[c.get(Calendar.DAY_OF_WEEK)-1]);
-        setFoodTable_MJ(weekDay[c.get(Calendar.DAY_OF_WEEK)-1]);
-
+        String Day = weekDay[c.get(Calendar.DAY_OF_WEEK)-1];
+        setFoodTable_ST(Day);
+        setFoodTable_MJ(Day);
+        if ( Day == "Mon" || Day == "Sun" || Day == "Sat"){
+            Button button1 = (Button)findViewById(R.id.btn1);
+            button1.setBackgroundColor(Color.rgb(200,250,250));
+        }
+        else if ( Day == "Tue") {
+            Button button2 = (Button)findViewById(R.id.btn2);
+            button2.setBackgroundColor(Color.rgb(200,250,250));
+        }
+        else if ( Day == "Wed") {
+            Button button3 = (Button)findViewById(R.id.btn3);
+            button3.setBackgroundColor(Color.rgb(200,250,250));
+        }
+        else if ( Day == "Thu") {
+            Button button4 = (Button)findViewById(R.id.btn4);
+            button4.setBackgroundColor(Color.rgb(200,250,250));
+        }
+        else if ( Day == "Fri") {
+            Button button5 = (Button)findViewById(R.id.btn5);
+            button5.setBackgroundColor(Color.rgb(200,250,250));
+        }
         Button button1 = (Button)findViewById(R.id.btn1);
         button1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-              Toast.makeText(getApplicationContext(), "월요일 식단입니다.", Toast.LENGTH_SHORT).show();
+                Button button1 = (Button)findViewById(R.id.btn1);
+                button1.setBackgroundColor(Color.rgb(200,250,250));
+                Button button2 = (Button)findViewById(R.id.btn2);
+                button2.setBackgroundColor(Color.rgb(255,255,255));
+                Button button3 = (Button)findViewById(R.id.btn3);
+                button3.setBackgroundColor(Color.rgb(255,255,255));
+                Button button4 = (Button)findViewById(R.id.btn4);
+                button4.setBackgroundColor(Color.rgb(255,255,255));
+                Button button5 = (Button)findViewById(R.id.btn5);
+                button5.setBackgroundColor(Color.rgb(255,255,255));
                 setFoodTable_ST("Mon");
                 setFoodTable_MJ("Mon");
             }
@@ -63,7 +93,16 @@ public class FoodTableActivity extends Activity {
         button2.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "화요일 식단입니다.", Toast.LENGTH_SHORT).show();
+                Button button1 = (Button)findViewById(R.id.btn1);
+                button1.setBackgroundColor(Color.rgb(255,255,255));
+                Button button2 = (Button)findViewById(R.id.btn2);
+                button2.setBackgroundColor(Color.rgb(200,250,250));
+                Button button3 = (Button)findViewById(R.id.btn3);
+                button3.setBackgroundColor(Color.rgb(255,255,255));
+                Button button4 = (Button)findViewById(R.id.btn4);
+                button4.setBackgroundColor(Color.rgb(255,255,255));
+                Button button5 = (Button)findViewById(R.id.btn5);
+                button5.setBackgroundColor(Color.rgb(255,255,255));
                 setFoodTable_ST("Tue");
                 setFoodTable_MJ("Tue");
             }
@@ -73,7 +112,16 @@ public class FoodTableActivity extends Activity {
         button3.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "수요일 식단입니다.", Toast.LENGTH_SHORT).show();
+                Button button1 = (Button)findViewById(R.id.btn1);
+                button1.setBackgroundColor(Color.rgb(255,255,255));
+                Button button2 = (Button)findViewById(R.id.btn2);
+                button2.setBackgroundColor(Color.rgb(255,255,255));
+                Button button3 = (Button)findViewById(R.id.btn3);
+                button3.setBackgroundColor(Color.rgb(200,250,250));
+                Button button4 = (Button)findViewById(R.id.btn4);
+                button4.setBackgroundColor(Color.rgb(255,255,255));
+                Button button5 = (Button)findViewById(R.id.btn5);
+                button5.setBackgroundColor(Color.rgb(255,255,255));
                 setFoodTable_ST("Wed");
                 setFoodTable_MJ("Wed");
             }
@@ -83,7 +131,16 @@ public class FoodTableActivity extends Activity {
         button4.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "목요일 식단입니다.", Toast.LENGTH_SHORT).show();
+                Button button1 = (Button)findViewById(R.id.btn1);
+                button1.setBackgroundColor(Color.rgb(255,255,255));
+                Button button2 = (Button)findViewById(R.id.btn2);
+                button2.setBackgroundColor(Color.rgb(255,255,255));
+                Button button3 = (Button)findViewById(R.id.btn3);
+                button3.setBackgroundColor(Color.rgb(255,255,255));
+                Button button4 = (Button)findViewById(R.id.btn4);
+                button4.setBackgroundColor(Color.rgb(200,250,250));
+                Button button5 = (Button)findViewById(R.id.btn5);
+                button5.setBackgroundColor(Color.rgb(255,255,255));
                 setFoodTable_ST("Thu");
                 setFoodTable_MJ("Thu");
             }
@@ -93,7 +150,16 @@ public class FoodTableActivity extends Activity {
         button5.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "금요일 식단입니다.", Toast.LENGTH_SHORT).show();
+                Button button1 = (Button)findViewById(R.id.btn1);
+                button1.setBackgroundColor(Color.rgb(255,255,255));
+                Button button2 = (Button)findViewById(R.id.btn2);
+                button2.setBackgroundColor(Color.rgb(255,255,255));
+                Button button3 = (Button)findViewById(R.id.btn3);
+                button3.setBackgroundColor(Color.rgb(255,255,255));
+                Button button4 = (Button)findViewById(R.id.btn4);
+                button4.setBackgroundColor(Color.rgb(255,255,255));
+                Button button5 = (Button)findViewById(R.id.btn5);
+                button5.setBackgroundColor(Color.rgb(200,250,250));
                 setFoodTable_ST("Fri");
                 setFoodTable_MJ("Fri");
             }
