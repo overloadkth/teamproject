@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.meromgreen.mjuapp;
 
 import android.app.Activity;
 import android.content.Context;

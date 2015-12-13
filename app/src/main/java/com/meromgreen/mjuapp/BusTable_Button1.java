@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.meromgreen.mjuapp;
 
 import android.os.Bundle;
 import android.os.StrictMode;

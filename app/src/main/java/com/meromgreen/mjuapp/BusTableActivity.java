@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.meromgreen.mjuapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 
-public class BusTable extends AppCompatActivity {
+public class BusTableActivity extends AppCompatActivity {
 
     private Intent BusTable_Button1;
     private Intent BusTable_Button2;
     private Intent BusTable_Button3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

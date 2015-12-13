@@ -9,7 +9,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.myapp.myiweb.MyiWeb"
+    tools:context="com.meromgreen.mjuapp.myiweb.MyiWeb"
     tools:showIn="@layout/app_bar_myiweb_navigation">
     <FrameLayout
         android:id="@+id/frame_container"

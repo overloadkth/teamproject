@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.meromgreen.mjuapp;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.meromgreen.mjuapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 
-import com.example.myapp.myiweb.MyiWeb;
-import com.example.myapp.myiweb.myiwebLoginActivity;
-import com.example.myapp.timetable.TimeTable;
-import com.example.myapp.timetable.timetableLoginActivity;
+import com.meromgreen.mjuapp.myiweb.myiwebLoginActivity;
+import com.meromgreen.mjuapp.timetable.timetableLoginActivity;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends Activity {

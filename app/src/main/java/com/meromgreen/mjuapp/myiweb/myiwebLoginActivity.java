@@ -1,4 +1,4 @@
-package com.example.myapp.myiweb;
+package com.meromgreen.mjuapp.myiweb;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.myapp.R;
+import com.meromgreen.mjuapp.R;
 
 public class myiwebLoginActivity extends AppCompatActivity {
 

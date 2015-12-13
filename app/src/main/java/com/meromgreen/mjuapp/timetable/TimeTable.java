@@ -1,31 +1,16 @@
-package com.example.myapp.timetable;
+package com.meromgreen.mjuapp.timetable;
 
 import android.content.Intent;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
-import android.view.Display;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.example.myapp.R;
-
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
+import com.meromgreen.mjuapp.R;
 
 public class TimeTable extends AppCompatActivity {
 

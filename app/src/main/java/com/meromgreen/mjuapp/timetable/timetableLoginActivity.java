@@ -1,4 +1,4 @@
-package com.example.myapp.timetable;
+package com.meromgreen.mjuapp.timetable;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.myapp.R;
-import com.example.myapp.timetable.TimeTable;
+import com.meromgreen.mjuapp.R;
 
 public class timetableLoginActivity extends AppCompatActivity {
 

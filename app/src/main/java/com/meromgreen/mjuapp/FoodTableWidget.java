@@ -1,20 +1,15 @@
-package com.example.myapp;
+package com.meromgreen.mjuapp;
 
-import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
-import android.content.Intent;
 import android.os.StrictMode;
 import android.widget.RemoteViews;
-import android.widget.TextView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import android.os.StrictMode;
 
 import java.io.IOException;
 import java.util.Calendar;
