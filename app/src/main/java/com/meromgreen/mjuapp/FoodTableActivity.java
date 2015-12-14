@@ -3,12 +3,18 @@ package com.meromgreen.mjuapp;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.app.Activity;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+import com.kakao.kakaolink.KakaoLink;
+import com.kakao.kakaolink.KakaoTalkLinkMessageBuilder;
+import com.kakao.util.KakaoParameterException;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -44,6 +50,16 @@ public class FoodTableActivity extends Activity {
         String Day = weekDay[c.get(Calendar.DAY_OF_WEEK)-1];
         setFoodTable_ST(Day);
         setFoodTable_MJ(Day);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shareKakao(view);
+            }
+        });
+
+
+
         if ( Day == "Mon" || Day == "Sun" || Day == "Sat"){
             Button button1 = (Button)findViewById(R.id.btn1);
             button1.setBackgroundColor(Color.rgb(200,250,250));
@@ -217,5 +233,29 @@ public class FoodTableActivity extends Activity {
 
       textview8.setText(special.text());
       textview10.setText(korea.text());
+    }
+    public void shareKakao (View v) {
+        {
+            try {
+                final KakaoLink kakaoLink = KakaoLink.getKakaoLink(this);
+                final KakaoTalkLinkMessageBuilder kakaoBuilder = kakaoLink.createKakaoTalkLinkMessageBuilder();
+
+            /*메시지 추가*/
+                kakaoBuilder.addText("학생식당\n" + "◎특식\n-"+ textview3.getText() + "\n"
+                                                    + "◎한식\n-"+ textview5.getText() + "\n\n"
+                                    +"명진당\n" + "◎특식\n-"+ textview8.getText() + "\n"
+                                                    + "◎한식\n-"+ textview10.getText() + "\n");
+
+
+//
+//            /*앱 실행버튼 추가*/
+//                kakaoBuilder.addAppButton("앱 실행");
+
+            /*메시지 발송*/
+                kakaoLink.sendMessage(kakaoBuilder, this);
+            } catch (KakaoParameterException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

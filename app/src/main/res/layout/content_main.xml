@@ -66,14 +66,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/mainbuttons"
                 android:layout_weight="0.15" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="카카오톡"
-                android:id="@+id/button5"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/mainbuttons"
-                android:layout_weight="0.15" />
+
         </TableRow>
     </TableLayout>
 
