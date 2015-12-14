@@ -39,9 +39,17 @@
             android:label="@string/title_activity_myiweb"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".timetable.TimeTable"
+            android:label="TimeTable"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.meromgreen.mjuapp.myiweb.myiwebLoginActivity"
             android:label="@string/title_activity_myiweb_login"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".timetable.timetableLoginActivity"
+            android:label="TimeTable" />
+
 
         <meta-data
             android:name="com.google.android.gms.version"
