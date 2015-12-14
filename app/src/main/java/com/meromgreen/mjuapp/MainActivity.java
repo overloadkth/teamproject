@@ -18,12 +18,10 @@ public class MainActivity extends Activity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    private GoogleApiClient client;
     private Intent foodTable;
     private Intent BusTable;
     private Intent TimeTable;
     private Intent myiWeb;
-    private Intent Kakao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +31,6 @@ public class MainActivity extends Activity {
         BusTable = new Intent(getApplicationContext(), BusTableActivity.class);
         TimeTable = new Intent(getApplicationContext(), timetableLoginActivity.class);
         myiWeb = new Intent(getApplicationContext(), myiwebLoginActivity.class);
-        Kakao = new Intent(getApplicationContext(), Kakao.class);
 
         Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new OnClickListener() {
@@ -62,13 +59,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(myiWeb);
-            }
-        });
-        Button button5 = (Button) findViewById(R.id.button5);
-        button5.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(Kakao);
             }
         });
     }
